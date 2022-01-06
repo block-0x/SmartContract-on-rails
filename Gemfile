@@ -2,18 +2,18 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.2'
-gem 'rails', '~> 6.1', '>= 6.1.4.4'
+gem 'rails', '5.2.6'
 
 gem 'pg', '~> 0.18'
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 5.0'
 
-gem 'rack-cors'
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'active_model_serializers'
 gem 'airbrake', '~> 6.2.1'
+gem 'rack-cors'
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
 
 group :development do
@@ -29,5 +29,5 @@ group :production do
   gem 'unicorn'
 end
 
-gem 'ethereum.rb', github: 'rubyruby/ethereum.rb'
 gem 'eth'
+gem 'ethereum.rb', github: 'rubyruby/ethereum.rb'
